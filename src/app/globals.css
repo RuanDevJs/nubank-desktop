@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "primereact/resources/primereact.min.css";
+@import "primereact/resources/themes/mdc-dark-indigo/theme.css";
+
+#menu a {
+  transition: 0.32s ease-in-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+#auth-galeria .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators {
+  /* background: none !important; */
+  border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+#auth-galeria
+  .p-galleria.p-galleria-indicator-onitem
+  .p-galleria-indicators
+  button {
+  /* background-color: #c2c2c2 !important; */
+  background-color: #f9f9f9 !important;
+  transition: ease-in-out 0.32s !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+#auth-galeria
+  .p-galleria.p-galleria-indicator-onitem
+  .p-galleria-indicators
+  .p-highlight
+  button {
+  /* background-color: #fff !important; */
+  background-color: #820ad1 !important;
+  transition: ease-in-out 0.32s !important;
 }
