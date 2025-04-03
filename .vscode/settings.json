@@ -18,7 +18,7 @@
     "yarn.lock": true,
     ".eslintrc.json": true,
     "next-env.d.ts": true,
-    "*/styles": true,
+    // "*/styles": true,
     // "*/assets": true
   }
 }

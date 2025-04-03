@@ -30,3 +30,23 @@
   background-color: #820ad1 !important;
   transition: ease-in-out 0.32s !important;
 }
+
+#grid-page-home {
+  display: grid;
+  grid-template-areas:
+    "account information"
+    "footer footer";
+  grid-template-columns: 260px 1fr;
+}
+
+#account {
+  grid-area: account;
+}
+
+#information {
+  grid-area: information;
+}
+
+#footer {
+  grid-area: footer;
+}
