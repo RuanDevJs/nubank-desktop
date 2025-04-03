@@ -1,53 +1,93 @@
-import Header from '@/components/Header'
-import { EyeClosed } from 'lucide-react'
-import React from 'react'
+"use client";
+import Account from "@/components/Home/Account";
+import { CreditCard, DollarSign, EyeClosed, Heart, IdCard } from "lucide-react";
+import { Galleria } from "primereact/galleria";
+import { JSX } from "react";
+
+const SLIDE_GALLERY = [
+  {
+    title: "Convide todo mundo para o Nu:",
+    description: "Coisa boa a gente compartilha.",
+    icon: <Heart fill="#B30FE2" size={32} color="#B30FE2" />
+  },
+  {
+    title: "Você tem até R$ 20.000 disponíveis",
+    description: "para empréstimo.",
+    icon: <DollarSign size={32} color="#B30FE2" />
+  },
+  {
+    title: "Traga seus dados e aumente sua",
+    description: "chance de crédito",
+    icon: <IdCard size={32} color="#B30FE2" strokeWidth={1} />
+  }
+]
+
+function Gallery(props: { title: string, description: string, icon: JSX.Element }) {
+  return (
+    <div className="bg-[#2C2C2C] px-8 py-10 w-full rounded-xl cursor-pointer hover:brightness-125 transition ease-in-out flex justify-between items-center">
+      <h2 className="font-normal text-lg 2xl:text-xl text-zinc-100">
+        {props.title} <br /> {props.description}
+      </h2>
+      <div className="bg-black p-1.5 rounded-full cursor-pointer">
+        {props.icon}
+      </div>
+    </div>
+  )
+}
 
 export default function Home() {
   return (
-    <div id="grid-page-home">
-      <div id="account" className='bg-[#0F0F0F] min-h-[50dvh] rounded-xl'>
-        <div className='py-8 px-5'>
-          <div className='flex items-center justify-between'>
-            <h1 className='text-xl font-medium text-white'>Conta</h1>
-            <EyeClosed size={25} />
+    <div id="grid-page-home" className="gap-5">
+      <Account />
+      <div id="information">
+        <Galleria
+          value={SLIDE_GALLERY}
+          showThumbnails={false}
+          showIndicators
+          showIndicatorsOnItem
+          item={Gallery}
+        />
+        <div className="bg-[#2C2C2C] px-8 py-10 w-full rounded-xl cursor-pointer hover:brightness-125 transition ease-in-out flex justify-between items-center my-4">
+          <div className="flex items-center gap-2">
+            <CreditCard color="#fff" size={32} />
+            <h2 className="font-normal text-xl text-zinc-100">Meus cartões</h2>
           </div>
-          <div>
-            <p className='text-sm font-normal text-zinc-500 py-1.5'>Saldo na conta</p>
-            <input type="password" className='w-full border-none outline-none font-bold text-base text-white' value="R$ 750,00" readOnly />
-          </div>
-          <div className='mt-8 bg-[#4E0578] w-[180px] h-[180px] rounded-full flex items-center justify-center'>
-            <div className='bg-[#2C2C2C] w-[130px] h-[130px] border-[10px] border-[#000] rounded-full flex flex-col items-center justify-center'>
-              <p className='text-xs'>Total investido: </p>
-              <input type="password" className='w-full border-none outline-none font-bold text-base text-white text-center' value="R$ 1250,00" readOnly />
+          <button className='bg-[#820AD1] w-36 py-2.5 rounded-full cursor-pointer hover:brightness-110 transition ease-in-out text-lg font-normal'>
+            Saiba mais
+          </button>
+        </div>
+        <div className="grid grid-cols-3 gap-3 min-h-[190px]">
+          <div className="w-full h-full">
+            <p className="grid grid-cols-[1fr_auto] gap-1.5 items-center before:block before:flex-1/2 before:h-[1px] before:bg-zinc-500 text-sm font-normal text-zinc-300">Cartões de crédito</p>
+            <div className="bg-[#0F0F0F] h-full mt-2.5 rounded-lg p-5">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h2 className="2xl:text-2xl text-lg font-medium text-zinc-200">Fatura atual</h2>
+                  <p className="text-xl font-normal text-zinc-200 mt-2">******</p>
+                </div>
+                <EyeClosed size={32} />
+              </div>
             </div>
           </div>
-          <div className='mt-7'>
-            <ul className='space-y-2'>
-              <li className='flex justify-between items-center'>
-                <p className='flex items-center text-xs font-normal text-white before:block before:w-1.5 before:h-1.5 before:bg-[#B30FE2] before:rounded-full gap-1.5'>Saldo na conta</p>
-                <input type="password" className='w-16 border-none outline-none font-bold text-base text-white' value="R$ 750,00" />
-              </li>
-              <li className='flex justify-between items-center'>
-                <p className='flex items-center text-xs font-normal text-white before:block before:w-1.5 before:h-1.5 before:bg-[#2E054B] before:rounded-full gap-1.5'>Saldo de investimento</p>
-                <input type="password" className='w-16 border-none outline-none font-bold text-base text-white' value="R$ 1250,00" />
-              </li>
-              <li className='mt-10'>
-                <button className='bg-[#B30FE2] w-32 py-1.5 rounded-2xl cursor-pointer'>
-                  Saiba mais
-                </button>
-              </li>
-            </ul>
+          <div>
+            <p className="grid grid-cols-[1fr_auto] gap-1.5 items-center before:block before:flex-1/2 before:h-[1px] before:bg-zinc-500 text-sm font-normal text-zinc-300">Empréstimos</p>
+            <div className="bg-[#0F0F0F] h-full mt-2.5 rounded-lg p-5">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h2 className="2xl:text-2xl text-lg font-medium text-zinc-200">Valor disponível <br /> de até</h2>
+                  <p className="text-xl font-normal text-zinc-200 mt-2">******</p>
+                </div>
+                <EyeClosed size={32} />
+              </div>
+            </div>
+          </div>
+          <div>
+            Fatura atual
           </div>
         </div>
       </div>
-      <div id="information">
-        {/* <div>
-          <h1>Convide todo mundo para o Nu: </h1>
-          <h1>Coisa boa a gente compartilha.</h1>
-        </div>
-        <div>
-          <p>Meus cartões</p>
-        </div> */}
+      <div id="footer">
+        footer
       </div>
     </div>
   )
