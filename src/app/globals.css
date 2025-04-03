@@ -81,3 +81,7 @@
 #footer {
   grid-area: footer;
 }
+
+#cards-home {
+  align-items: start;
+}
