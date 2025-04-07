@@ -61,6 +61,32 @@
   border: 1px solid #fff !important;
 }
 
+/* @FOOTER PAGE HOME */
+
+#footer .p-carousel-indicators .p-carousel-indicator button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background-color: #ccc;
+}
+
+#footer .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  /* background-color: #c2c2c2 !important; */
+  /* background-color: transparent !important;
+  transition: ease-in-out 0.32s !important;
+  border: 1px solid #fff !important;
+  width: 3px !important;
+  height: 3px !important; */
+  background-color: #820ad1;
+}
+
+/* #footer .p-carousel-indicator button { */
+/* background-color: #fff !important; */
+/* background-color: #fff !important;
+  transition: ease-in-out 0.32s !important;
+  border: 1px solid #fff !important; */
+/* } */
+
 #grid-page-home {
   display: grid;
   grid-template-areas:
@@ -84,4 +110,36 @@
 
 #cards-home {
   align-items: start;
+}
+
+@keyframes FromUpToDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+}
+
+@keyframes FromDownToUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+}
+
+.animate-down {
+  opacity: 0;
+  animation: FromUpToDown 0.72s forwards;
+}
+
+.animate-up {
+  opacity: 0;
+  animation: FromDownToUp 0.72s forwards;
 }

@@ -12,7 +12,7 @@ export default function Account() {
   }
 
   return (
-    <div id="account" className='bg-[#0F0F0F] min-h-[50dvh] rounded-xl'>
+    <div id="account" className='bg-[#0F0F0F] min-h-[50dvh] rounded-xl animate-up'>
       <div className='py-8 px-5'>
         <div className='flex items-center justify-between'>
           <h1 className='text-xl font-medium text-white'>Conta</h1>

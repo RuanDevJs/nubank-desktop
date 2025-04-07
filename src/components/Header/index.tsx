@@ -7,7 +7,7 @@ import { ArrowDown, Bell, Menu, Plus } from 'lucide-react'
 
 export default function Header() {
   return (
-    <header className='bg-[rgba(46,_5,_75,_0.6)] p-5 flex justify-between items-center'>
+    <header className='min-h-[12dvh] bg-[rgba(46,_5,_75,_0.6)] p-5 flex justify-between items-center'>
       <div>
         <Link href="/home">
           <Image src={NubankLogo} width={50} alt="" />
