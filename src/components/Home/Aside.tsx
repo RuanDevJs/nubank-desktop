@@ -50,12 +50,12 @@ export default function Aside() {
                 </div>
                 <p className="font-normal text-base text-zinc-300">Área Pix</p>
               </Link>
-              <div className="flex gap-2 mt-5 items-center">
+              <Link href="/home/area-pix" className={activeLink({ active: isActiveLink("/home/pagamentos") })}>
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <Barcode color="#d4d4d8" size={20} />
                 </div>
-                <Link href="#" className="font-normal text-base text-zinc-300">Pagar</Link>
-              </div>
+                <Link href="/home/pagamentos" className="font-normal text-base text-zinc-300">Pagar</Link>
+              </Link>
               <div className="flex gap-2 mt-5 items-center">
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <Banknote color="#d4d4d8" size={20} />
