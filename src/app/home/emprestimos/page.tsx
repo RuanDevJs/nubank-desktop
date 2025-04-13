@@ -1,8 +1,5 @@
-'use client'
 import { ArrowRight, Cake, HandCoins, Landmark, Plus, Signal } from 'lucide-react'
 import React from 'react'
-
-//className='min-h-[460px] h-[460px] max-[480px]'
 
 export default function page() {
   return (
