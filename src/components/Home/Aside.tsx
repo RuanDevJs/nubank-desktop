@@ -62,12 +62,12 @@ export default function Aside() {
                 </div>
                 <span className="font-normal text-base text-zinc-300">Pegar emprestado</span>
               </Link>
-              <div className="flex gap-2 mt-5 items-center">
+              <Link href="/home/transferencia" className={activeLink({ active: isActiveLink("/home/transferencia") })}>
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <Banknote color="#d4d4d8" size={20} />
                 </div>
-                <Link href="#" className="font-normal text-base text-zinc-300">Transferir</Link>
-              </div>
+                <span className="font-normal text-base text-zinc-300">Transferir</span>
+              </Link>
               <div className="flex gap-2 mt-5 items-center">
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <Smartphone color="#d4d4d8" size={20} />

@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowRight, ArrowUpLeft, ArrowUpRight, LayoutGrid } from 'lucide-react'
-import { div } from 'motion/react-client';
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { tv } from 'tailwind-variants';
 
@@ -28,23 +28,23 @@ export default function Transferencia() {
   }
 
   return (
-    <div className='h-full flex flex-col'>
-      <div className='bg-[#0F0F0F] min-w-[560px] w-[760px] px-8 py-10 rounded m-auto'>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center'>
-            <button className='bg-[#2C2C2C] w-10 h-10 flex items-center justify-center rounded-full'>
+    <div className='w-full h-full opacity-0 animate-up'>
+      <div className='bg-[#0F0F0F] h-[65%] w-[100%] px-8 py-10 rounded m-auto'>
+        <Link href="/home" className='cursor-pointer group flex items-center justify-between'>
+          <div className='flex items-center cursor-pointer'>
+            <button className='bg-[#2C2C2C] group-hover:brightness-125 w-10 h-10 flex items-center justify-center rounded-full'>
               <ArrowUpLeft size={28} />
             </button>
-            <button className='bg-[#2C2C2C] rounded-full h-10 px-3.5 font-medium text-base'>
+            <button className='bg-[#2C2C2C] group-hover:brightness-125 rounded-full h-10 px-3.5 font-medium text-base'>
               Voltar a página inicial
             </button>
           </div>
-          <div>
+          <div className='cursor-pointer'>
             <button className='bg-[#2C2C2C] w-10 h-10 flex items-center justify-center rounded-full'>
               <LayoutGrid size={24} color='#B30FE2' strokeWidth={1} />
             </button>
           </div>
-        </div>
+        </Link>
         <div className='mt-7'>
           <h1 className='text-2xl font-medium'>Qual é o valor da sua transferência?</h1>
           <p className='text-base font-medium text-[#C8C2C2] mt-1.5'>Saldo disponível de R$ 38.500,00</p>
@@ -63,7 +63,7 @@ export default function Transferencia() {
             <ArrowUpRight size={22} strokeWidth={1} />
           </p>
         </div>
-        <div className='flex items-center w-full mt-7 group'>
+        <div className='flex items-center w-full mt-12 group'>
           <div className='flex items-center w-full'>
             <button className='bg-transparent border border-[#2c2c2c] w-[94%] rounded-full h-10 px-3.5 font-normal text-base cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s]'>
               Transferir
