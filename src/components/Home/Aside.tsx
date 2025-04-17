@@ -68,23 +68,23 @@ export default function Aside() {
                 </div>
                 <span className="font-normal text-base text-zinc-300">Transferir</span>
               </Link>
-              <div className="flex gap-2 mt-5 items-center">
+              <Link href="/home/recarga-celular" className={activeLink({ active: isActiveLink("/home/recarga-celular") })}>
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <Smartphone color="#d4d4d8" size={20} />
                 </div>
-                <Link href="#" className="font-normal text-base text-zinc-300">Recarga de celular</Link>
-              </div>
+                <span className="font-normal text-base text-zinc-300">Recarga de celular</span>
+              </Link>
             </div>
           </li>
           <li className="border-b-1 border-zinc-500 pb-7">
             <h2 className="text-lg font-medium uppercase py-5">Investimentos</h2>
             <div>
-              <div className="flex gap-2 items-center">
+              <Link href="/home/caixinha" className={activeLink({ active: isActiveLink("/home/caixinha") })} style={{ marginTop: 0 }}>
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <PiggyBank color="#d4d4d8" size={20} />
                 </div>
-                <Link href="#" className="font-normal text-base text-zinc-300">Caixinhas e investir</Link>
-              </div>
+                <span className="font-normal text-base text-zinc-300">Caixinhas e investir</span>
+              </Link>
             </div>
           </li>
           <li>

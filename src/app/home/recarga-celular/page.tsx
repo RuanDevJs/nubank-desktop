@@ -1,18 +1,9 @@
 'use client'
 
-import { ArrowRight, ArrowUpLeft, ArrowUpRight, LayoutGrid } from 'lucide-react'
-import Link from 'next/link';
-import React, { useState } from 'react'
-import { tv } from 'tailwind-variants';
+import React from 'react'
+import { ArrowRight, ArrowUpLeft, ArrowUpRight, LayoutGrid } from 'lucide-react';
 
-const priceVariant = tv({
-  base: "px-3 border border-zinc-500 rounded-full transition ease-in-out bg-transparent cursor-pointer hover:bg-[#A30CFF] hover:border-[#A30CFF] transition ease-in-out duration-[0.25s]",
-  variants: {
-    isSelected: {
-      true: "bg-[#A30CFF] border-[#A30CFF]"
-    }
-  }
-})
+import Link from 'next/link';
 
 export default function RecargaCelular() {
   return (
@@ -43,17 +34,20 @@ export default function RecargaCelular() {
           />
         </div>
         <div className="mt-7">
-          <p className='flex gap-1.5 items-center text-[#A30CFF] text-base font-normal border-b border-[#A30CFF] w-fit cursor-pointer hover:brightness-125 transition ease-in-out'>
-            Consultar meus limites Pix
-            <ArrowUpRight size={22} strokeWidth={1} />
+          <p className='text-zinc-300 text-base font-medium cursor-pointer'>
+            Histórico recente:
+          </p>
+          <p className='text-zinc-500 text-sm font-medium cursor-pointer py-1'>
+            (00) 0000-0000
+            <span className='text-zinc-600 text-xs font-normal ml-1'>31 dias atrás</span>
           </p>
         </div>
         <div className='flex items-center w-full mt-12 group'>
           <div className='flex items-center w-full'>
-            <button className='bg-transparent border border-[#2c2c2c] w-[94%] rounded-full h-10 px-3.5 font-normal text-base cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s]'>
+            <button className='bg-transparent border border-[#2c2c2c] w-[94%] rounded-full h-10 px-3.5 font-normal text-base cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s] group-hover:border-[#a30cff]'>
               Pagar recarga
             </button>
-            <button className='bg-transparent border border-[#2c2c2c] w-[6%]  h-10 flex items-center justify-center rounded-full cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s]'>
+            <button className='bg-transparent border border-[#2c2c2c] w-[6%]  h-10 flex items-center justify-center rounded-full cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] group-hover:border-[#a30cff] duration-[0.32s]'>
               <ArrowRight size={25} />
             </button>
           </div>

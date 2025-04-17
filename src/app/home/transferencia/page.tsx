@@ -70,10 +70,10 @@ export default function Transferencia() {
         </div>
         <div className='flex items-center w-full mt-12 group'>
           <div className='flex items-center w-full'>
-            <button className='bg-transparent border border-[#2c2c2c] w-[94%] rounded-full h-10 px-3.5 font-normal text-base cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s]'>
+            <button className='bg-transparent border border-[#2c2c2c] w-[94%] rounded-full h-10 px-3.5 font-normal text-base cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s] group-hover:border-[#a30cff]'>
               Transferir
             </button>
-            <button className='bg-transparent border border-[#2c2c2c] w-[6%]  h-10 flex items-center justify-center rounded-full cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s]'>
+            <button className='bg-transparent border border-[#2c2c2c] w-[6%]  h-10 flex items-center justify-center rounded-full cursor-pointer transition ease-in-out group-hover:bg-[#a30cff] duration-[0.32s] group-hover:border-[#a30cff]'>
               <ArrowRight size={25} />
             </button>
           </div>

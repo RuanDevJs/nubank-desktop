@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import Aside from "@/components/Home/Aside";
 
-
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div>
