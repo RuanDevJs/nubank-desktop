@@ -1,4 +1,4 @@
-import { EyeClosed } from 'lucide-react'
+import { EyeClosed, Wallet } from 'lucide-react'
 import React from 'react'
 
 export default function page() {
@@ -30,13 +30,18 @@ export default function page() {
             </span>
           </h2>
           <div className='grid grid-cols-3 gap-5 h-[460px] mt-2'>
-            <div className='bg-[#8F0BE6]'>
+            <div className='h-full'>
+              <div className='bg-[#2E054B] rounded h-[82%] 2xl:px-5 2xl:py-8 p-3 flex items-end justify-start'>
+                <div className='flex flex-col gap-5'>
+                  <Wallet size={40} strokeWidth={1.8} color='#BE87FF' className='border-2 border-[#BE87FF] rounded-full p-1' />
+                  <h3 className='text-[#BE87FF] text-3xl 2xl:text-5xl font-medium'>Minha Carteira</h3>
+                </div>
+              </div>
+            </div>
+            <div className='bg-[#8F0BE6] rounded h-[50%]'>
               <h3>Minha Carteira</h3>
             </div>
-            <div className='bg-[#8F0BE6]'>
-              <h3>Minha Carteira</h3>
-            </div>
-            <div className='bg-[#8F0BE6]'>
+            <div className='bg-[#8F0BE6] rounded h-[50%]'>
               <h3>Minha Carteira</h3>
             </div>
           </div>
