@@ -1,4 +1,5 @@
-import { ArrowRight, EyeClosed, Plus, Wallet } from 'lucide-react'
+/* eslint-disable @next/next/no-img-element */
+import { ArrowRight, EyeClosed, House, Plus, ShieldCheckIcon, Smartphone, Wallet } from 'lucide-react'
 import NuLimiteGarantido from "@/assets/Caixinha/NuLimiteGarantido.png"
 
 export default function page() {
@@ -62,8 +63,8 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className='mt-3 h-[154px]'>
-            <h2 className='grid grid-cols-[1fr_auto] gap-5 items-center before:block before:w-full before:h-[1px] before:bg-zinc-500 text-sm font-normal text-white h-[20%]'>
+          <div className='h-[154px]'>
+            <h2 className='grid grid-cols-[1fr_auto] gap-5 items-center before:block before:w-full before:h-[1px] before:bg-zinc-500 text-sm font-normal text-white h-[20%] mb-0.5'>
               <span className='font-normal text-base text-zinc-200'>
                 Cartões de crédito
               </span>
@@ -86,10 +87,45 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className='h-[240px] mt-2'>
+      <div className='min-h-[230px] 2xl:h-[230px] mt-5 opacity-0 animate-down' style={{ animationDelay: '.22s' }}>
         <h2 className='h-[28px] grid grid-cols-[auto_1fr] gap-5 items-center after:block after:w-full after:h-[1px] after:bg-zinc-500 text-sm font-medium text-white'>
           Seguros
         </h2>
+        <div className='grid grid-cols-1 2xl:grid-cols-3 gap-5 mt-3 h-[83%] pb-5 2xl:pb-0'>
+          <div className="bg-[#2C2C2C] px-3 py-10 w-full rounded-xl cursor-pointer hover:brightness-125 transition ease-in-out flex justify-between items-center flex-1/3 opacity-0 animate-up" style={{ animationDelay: '0.32s' }}>
+            <div className="flex items-center gap-2">
+              <div className='w-[45px] h-[45px] rounded-full flex items-center justify-center bg-[#3D3D3D]'>
+                <ShieldCheckIcon color="#fff" size={32} strokeWidth={1.5} />
+              </div>
+              <h2 className="font-normal text-lg text-zinc-100">Assistente de Pagamentos</h2>
+            </div>
+            <button className='bg-[#820AD1] w-28 py-1.5 rounded-full cursor-pointer hover:brightness-110 transition ease-in-out text-sm font-normal'>
+              Conhecer
+            </button>
+          </div>
+          <div className="bg-[#2C2C2C] px-3 py-10 w-full rounded-xl cursor-pointer hover:brightness-125 transition ease-in-out flex justify-between items-center flex-1/3 opacity-0 animate-up" style={{ animationDelay: '0.42s' }}>
+            <div className="flex items-center gap-2">
+              <div className='w-[45px] h-[45px] rounded-full flex items-center justify-center bg-[#3D3D3D]'>
+                <Smartphone color="#fff" size={32} strokeWidth={1.5} />
+              </div>
+              <h2 className="font-normal text-lg text-zinc-100">Seguro Celular</h2>
+            </div>
+            <button className='bg-[#820AD1] w-28 py-1.5 rounded-full cursor-pointer hover:brightness-110 transition ease-in-out text-sm font-normal'>
+              Conhecer
+            </button>
+          </div>
+          <div className="bg-[#2C2C2C] px-3 py-10 w-full rounded-xl cursor-pointer hover:brightness-125 transition ease-in-out flex justify-between items-center flex-1/3 opacity-0 animate-up" style={{ animationDelay: '0.52s' }}>
+            <div className="flex items-center gap-2">
+              <div className='w-[45px] h-[45px] rounded-full flex items-center justify-center bg-[#3D3D3D]'>
+                <House color="#fff" size={32} strokeWidth={1.5} />
+              </div>
+              <h2 className="font-normal text-lg text-zinc-100">Seguro Residencial</h2>
+            </div>
+            <button className='bg-[#820AD1] w-28 py-1.5 rounded-full cursor-pointer hover:brightness-110 transition ease-in-out text-sm font-normal'>
+              Conhecer
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

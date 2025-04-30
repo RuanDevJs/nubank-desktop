@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ArrowRight, ArrowUpLeft, ArrowUpRight, LayoutGrid } from 'lucide-react';
+import { ArrowRight, ArrowUpLeft, LayoutGrid } from 'lucide-react';
 
 import Link from 'next/link';
 
