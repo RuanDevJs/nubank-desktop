@@ -14,9 +14,9 @@ const activeLink = tv({
       false: "border-l-3 bg-transparent border-transparent rounded-tr rounded-br"
     }
   }
-})
+});
 
-export default function Aside() {
+export default function Aside(props: React.ComponentProps<"div">) {
   const pathname = usePathname();
 
   const isActiveLink = (href: string) => {
@@ -24,7 +24,7 @@ export default function Aside() {
   };
 
   return (
-    <aside className="w-full">
+    <aside className="w-full" {...props}>
       <nav className="h-full">
         <div className="flex flex-col justify-center items-center ">
           <div className="flex justify-center items-center gap-2.5 rounded-full border-2 border-white px-2.5 py-1.5">
@@ -90,12 +90,12 @@ export default function Aside() {
           <li>
             <h2 className="text-lg font-medium uppercase py-5">Shopping</h2>
             <div>
-              <div className="flex gap-2 items-center">
+              <Link href="/home/promocao" className={activeLink({ active: isActiveLink("/home/promocao") })} style={{ marginTop: 0 }}>
                 <div className="border p-1 rounded-full hover:bg-zinc-800 cursor-pointer transition ease-in-out">
                   <BadgePercent color="#d4d4d8" size={20} />
                 </div>
-                <Link href="#" className="font-normal text-base text-zinc-300">Promoções</Link>
-              </div>
+                <span className="font-normal text-base text-zinc-300">Promoções</span>
+              </Link>
             </div>
           </li>
           <li className="mt-10 flex items-center gap-3">
