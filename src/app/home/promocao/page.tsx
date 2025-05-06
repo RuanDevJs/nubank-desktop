@@ -1,133 +1,84 @@
-import { Gift, Search, Settings, Store, Ticket, Truck } from 'lucide-react';
-import CashbackAmazon from "@/assets/Promocao/Amazon.svg"
-import CashbackCasasBahia from "@/assets/Promocao/Casas Bahia.svg"
-import CashbackMagazineLuiza from "@/assets/Promocao/Magazine Luiza.svg"
-import CashbackAliexpres from "@/assets/Promocao/Aliexpress.svg"
-import CashbackShopee from "@/assets/Promocao/Shopee.svg"
-import CashbackCarrefour from "@/assets/Promocao/Carrefour.svg"
-import CashbackNike from "@/assets/Promocao/Nike.svg"
-import CashbackAdidas from "@/assets/Promocao/Adidas.svg"
-import CashbackKabum from "@/assets/Promocao/Kabum.svg"
-import CashbackCentauro from "@/assets/Promocao/Centauro.svg"
-import Image, { ImageProps } from 'next/image';
+import Cashback from "@/components/Promocao/Cashback";
+import Heading from "@/components/Promocao/Heading";
 
-interface ICashback {
-  title: string;
-  description: string;
-  image: ImageProps;
-}
+import Iphone from "@/assets/Promocao/BlackFriday/Iphone.png";
+import ArCondicionado from "@/assets/Promocao/BlackFriday/Ar Condicionado.png";
 
-const CARDS = [
-  {
-    title: "Pedidos",
-    icon: <Truck size={32} strokeWidth={1.5} />
-  },
-  {
-    title: "Cupons",
-    icon: <Ticket size={32} strokeWidth={1.5} />
-  },
-  {
-    title: "Lojas",
-    icon: <Store size={32} strokeWidth={1.5} />
-  },
-  {
-    title: "Gift Cards",
-    icon: <Gift size={32} strokeWidth={1.5} />
-  },
-  {
-    title: "Serviços",
-    icon: <Settings size={32} strokeWidth={1.5} />
-  }
-];
+import NubankLogo from "@/assets/Promocao/BlackFriday/nubank Logo.svg";
 
-const CASHBACKS: ICashback[] = [
-  {
-    title: "Amazon",
-    description: "Até 3%",
-    image: CashbackAmazon
-  },
-  {
-    title: "Casas Bahia",
-    description: "5%",
-    image: CashbackCasasBahia
-  },
-  {
-    title: "Magazine Luiza",
-    description: "3%",
-    image: CashbackMagazineLuiza
-  },
-  {
-    title: "AliExpress",
-    description: "2%",
-    image: CashbackAliexpres
-  },
-  {
-    title: "Shopee",
-    description: "0,5%",
-    image: CashbackShopee
-  },
-  {
-    title: "Carrefour",
-    description: "Até 3%",
-    image: CashbackCarrefour
-  },
-  {
-    title: "Nike",
-    description: "Até 2,5%",
-    image: CashbackNike
-  },
-  {
-    title: "Adidas",
-    description: "Até 3%",
-    image: CashbackAdidas
-  },
-  {
-    title: "Kabum",
-    description: "Até 3%",
-    image: CashbackKabum
-  },
-  {
-    title: "Centauro",
-    description: "Até 3%",
-    image: CashbackCentauro
-
-  },
-]
+import Image from "next/image";
 
 export default function Promocao() {
   return (
     <div>
-      <div id="heading" className='bg-[#4E0578] px-3.5 py-5'>
-        <div className='p-3 bg-[#000000] w-full rounded-full flex gap-1.5'>
-          <Search size={18} color='#c2c2c2' className='opacity-75 cursor-pointer' />
-          <input
-            className='w-full outline-none text-base font-normal'
-            placeholder='Busque aqui o que desejar.'
-          />
-        </div>
-        <div className='grid grid-cols-5 items-center mt-5 gap-3'>
-          {CARDS.map((card) => (
-            <div key={card.title} className='bg-[#820AD1] p-3.5 rounded-xl cursor-pointer hover:brightness-110 transition ease-in-out hover:translate-y-[-8px]'>
-              <div className='w-12 h-12 m-auto rounded-full bg-[rgba(25,_25,_25,_0.2)] flex items-center justify-center'>
-                {card.icon}
+      <Heading />
+      <Cashback />
+      <div id="black-friday" className="w-[99%] mt-10 grid grid-cols-2 gap-5 items-stretch">
+        <div className="2xl:h-full bg-[#ECECEC] rounded relative overflow-hidden hover:-translate-y-5 hover:brightness-105 cursor-pointer transition ease-in-out">
+          <div className="grid grid-cols-[auto_1fr] h-full">
+            <div className="h-full relative z-10 p-3 2xl:p-5">
+              <div className="flex gap-3">
+                <h1 className="text-xl 2xl:text-2xl font-medium uppercase text-white">
+                  Black Friday
+                </h1>
+                <Image src={NubankLogo} width={32} height={32} alt="" />
               </div>
-              <h2 className='text-base font-medium mt-2 text-center'>{card.title}</h2>
+              <p className="text-2xl 2xl:text-3xl font-light text-white my-3">
+                Seu novo Iphone <br /> em <span className="font-medium">até 24x</span>
+              </p>
+              <button
+                className="font-normal text-sm 2xl:text-lg bg-[#B30FE2] py-1 px-2.5 rounded-full transition ease-in-out hover:brightness-110 cursor-pointer"
+              >
+                Comprar agora
+              </button>
             </div>
-          ))}
+            <div className="h-full flex flex-col justify-end items-end">
+              <Image
+                src={Iphone.src}
+                alt=""
+                className="relative z-10 object-cover w-[100%] 2xl:w-[100%] h-[80%] 2xl:h-full"
+                width={Iphone.width}
+                height={Iphone.height}
+                draggable="false"
+              />
+            </div>
+          </div>
+          <div className="bg-[#BE87FF] w-[572px] h-[572px] rounded-full absolute -top-16 -left-50 z-1" />
         </div>
-      </div>
-      <div id="cashback" className='w-[99%] mt-5'>
-        <h3 className="grid grid-cols-[auto_auto_1fr] items-center after:block after:w-full after:h-[1px] after:bg-zinc-700 text-sm font-medium text-white">Cashbacks da <span className='ml-1.5 mr-3 text-[#B30FE2]'> Black Friday </span></h3>
-        <div className="grid grid-cols-10 gap-5 mt-2.5">
-          {CASHBACKS.map((cashback) => (
-            <div key={cashback.title} className='mt-3.5 transition ease-in-out hover:brightness-110 hover:bg-[rgba(0,0,0,0.64)] hover:-translate-y-2 cursor-pointer'>
-              <div className='mb-1'>
-                <Image src={cashback.image.src} width={80} height={80} quality={80} className='w-full h-full' draggable={false} alt={cashback.title} />
+        <div className="2xl:h-full bg-[#ECECEC] rounded relative overflow-hidden hover:-translate-y-5 hover:brightness-105 cursor-pointer transition ease-in-out">
+          <div className="grid grid-cols-[auto_1fr] h-full">
+            <div className="h-full relative z-10 p-3 2xl:p-5">
+              <div className="flex gap-3">
+                <h1 className="text-xl 2xl:text-2xl font-medium uppercase text-black">
+                  Black Friday
+                </h1>
+                <Image src={NubankLogo} width={32} height={32} alt="" />
               </div>
-              <h3 className='text-sm font-medium text-center py-1 text-white line-clamp-1'>{cashback.title}</h3>
-              <p className='text-xs font-normal text-center text-zinc-400'>{cashback.description}</p>
+              <div className="my-3">
+                <p className="text-2xl 2xl:text-3xl font-normal text-black">
+                  Ar condicionado para <br /> curtir o verão
+                </p>
+                <p className="w-full flex items-end gap-1 text-sm font-normal text-[#B30FE2] mt-1.5">
+                  R$ <span className="text-5xl font-bold">120</span> <span className="text-xs text-zinc-900 font-normal">sem juros <br /> e frete</span>
+                </p>
+              </div>
+              <button
+                className="mt-2 font-normal text-sm 2xl:text-lg bg-[#B30FE2] py-1 px-2.5 rounded-full transition ease-in-out hover:brightness-110 cursor-pointer"
+              >
+                Comprar agora
+              </button>
             </div>
-          ))}
+            <div className="h-full flex flex-col justify-end items-end">
+              <Image
+                src={ArCondicionado.src}
+                alt=""
+                className="relative z-10 object-cover w-[100%] 2xl:w-[100%] h-[80%] 2xl:h-full"
+                width={220}
+                height={220}
+                draggable="false"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
