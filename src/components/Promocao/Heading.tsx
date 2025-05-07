@@ -34,14 +34,16 @@ export default function Heading() {
         />
       </div>
       <div className='grid grid-cols-5 items-center mt-5 gap-3'>
-        {CARDS.map((card) => (
-          <div key={card.title} className='bg-[#820AD1] p-3.5 rounded-xl cursor-pointer hover:brightness-110 transition ease-in-out hover:translate-y-[-8px]'>
-            <div className='w-12 h-12 m-auto rounded-full bg-[rgba(25,_25,_25,_0.2)] flex items-center justify-center'>
-              {card.icon}
+        {CARDS.map((card, index) => {
+          return (
+            <div key={card.title} className={`opacity-0 animate-up bg-[#820AD1] p-3.5 rounded-xl cursor-pointer hover:brightness-110 transition ease-in-out hover:translate-y-[-8px]`} style={{ animationDelay: `${0.25 * index}s` }}>
+              <div className='w-12 h-12 m-auto rounded-full bg-[rgba(25,_25,_25,_0.2)] flex items-center justify-center'>
+                {card.icon}
+              </div>
+              <h2 className='text-base font-medium mt-2 text-center'>{card.title}</h2>
             </div>
-            <h2 className='text-base font-medium mt-2 text-center'>{card.title}</h2>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

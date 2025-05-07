@@ -76,8 +76,8 @@ export default function Cashback() {
     <div id="cashback" className='w-[99%] mt-5'>
       <h3 className="grid grid-cols-[auto_auto_1fr] items-center after:block after:w-full after:h-[1px] after:bg-zinc-700 text-sm font-medium text-white">Cashbacks da <span className='ml-1.5 mr-3 text-[#B30FE2]'> Black Friday </span></h3>
       <div className="grid grid-cols-10 gap-5 mt-2.5">
-        {CASHBACKS.map((cashback) => (
-          <div key={cashback.title} className='mt-3.5 transition ease-in-out hover:brightness-110 hover:bg-[rgba(0,0,0,0.64)] hover:-translate-y-2 cursor-pointer'>
+        {CASHBACKS.map((cashback, index) => (
+          <div key={cashback.title} className='opacity-0 animate-down mt-3.5 transition ease-in-out hover:brightness-110 hover:bg-[rgba(0,0,0,0.64)] hover:-translate-y-2 cursor-pointer' style={{ animationDelay: `${index * 0.15}s` }}>
             <div className='mb-1'>
               <Image src={cashback.image.src} width={80} height={80} quality={80} className='w-full h-full' draggable={false} alt={cashback.title} />
             </div>
