@@ -15,14 +15,14 @@ interface IProps {
 
 export default function Product({ data, image }: IProps) {
   return (
-    <div className="product">
+    <div className="product hover:-translate-y-3 cursor-pointer transition ease-in-out">
       <div>
         <Image
           src={image.src}
           width={image.width}
           height={image.height}
           quality={80}
-          className="w-full object-cover rounded-2xl"
+          className="w-full h-full object-cover rounded-2xl"
           alt=""
           draggable={false}
         />
