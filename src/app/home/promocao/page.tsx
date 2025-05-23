@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Cashback from "@/components/Promocao/Cashback";
 import Heading from "@/components/Promocao/Heading";
 import BlackFriday from "@/components/Promocao/BlackFriday";
@@ -14,8 +16,9 @@ import Nintendo from "@/assets/Promocao/GiftCards/Nitendo.svg";
 
 import Microsoft from "@/assets/Promocao/GiftCards/Microsoft.png";
 import Xbox from "@/assets/Promocao/GiftCards/Xbox.svg";
+import NubankSVG from "@/assets/Promocao/GiftCards/NubankLogo.svg";
+import Background from "@/assets/Promocao/GiftCards/Background.jpg";
 
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Promocao() {
@@ -105,6 +108,30 @@ export default function Promocao() {
               <button className="bg-[#4E0578] p-2 rounded-full hover:brightness-125 transition ease-in-out cursor-pointer 2xl:p-5 2xl:left-10 relative">
                 <ArrowRight size={25} />
               </button>
+            </div>
+          </div>
+        </div>
+        <div id="nu-pay" className="mt-5 bg-[#ECECEC] rounded 2xl:w-full">
+          <div className="grid grid-cols-2 2xl:grid-cols-[42%_1fr] items-center h-full">
+            <div className="ml-10">
+              <div className="flex items-center gap-2">
+                <div>
+                  <Image src={NubankSVG} alt="" width={72} height={72} className="2xl:w-24" />
+                </div>
+                <h2 className="text-5xl 2xl:text-7xl font-medium text-[#4E0578]">Pay</h2>
+              </div>
+              <div className="mt-3 2xl:mt-5">
+                <p className="font-normal text-lg 2xl:text-3xl text-black">
+                  Pague com mais segurança, <br />
+                  <span className="text-[#4E0578] font-medium">sem usar o cartão</span>.
+                </p>
+                <button className="2xl:mt-5 2xl:px-10 2xl:text-xl px-5 py-2 mt-2.5 font-normal text-sm bg-[#4E0578] rounded-full cursor-pointer hover:brightness-125 transition ease-in-out">
+                  Saiba mais
+                </button>
+              </div>
+            </div>
+            <div className="bg-red-400 h-full">
+              <Image src={Background} alt="" quality={80} className="w-full h-full rounded-tr rounded-br object-contain" />
             </div>
           </div>
         </div>

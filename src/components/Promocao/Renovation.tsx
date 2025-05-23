@@ -1,8 +1,8 @@
 import Product from "@/components/Promocao/Product";
 
 import GeladeiraBrastempFrostFree from "@/assets/Promocao/Renovation/Geladeira Brastemp Frost Free Duplex BRM44HB.png";
-import FritadeiraAirFryer from "@/assets/Promocao/Renovation/Fritadeira Air Fryer Forno Oven 12 Litros, Mondial.png";
-import LavadoraRoupasConsul12kg from "@/assets/Promocao/Renovation/Lavadora de Roupas Consul 12kg CWH12BB com Dosagem Econômica.png";
+import FritadeiraAirFryer from "@/assets/Promocao/Renovation/Fritadeira.png"; //
+import LavadoraRoupasConsul12kg from "@/assets/Promocao/Renovation/LavadoraCWH12BB.png"; // 
 import GeladeiraBrastempBRM44HK from "@/assets/Promocao/Renovation/Geladeira Brastemp BRM44HK Frost Free.png";
 import LavadoraRoupasElectrolux from "@/assets/Promocao/Renovation/Lavadora de Roupas Electrolux 11Kg LES11 Essencial Care.png";
 
