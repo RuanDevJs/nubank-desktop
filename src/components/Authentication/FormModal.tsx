@@ -6,7 +6,7 @@ import Nubank from "@/assets/Authentication/NubankLogo.svg"
 import Link from "next/link";
 import { motion } from "motion/react";
 import { tv } from "tailwind-variants";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Eye } from "lucide-react";
 
 const linkVariant = tv({
@@ -24,6 +24,7 @@ type Auth = "sign-in" | "sign-up";
 export default function FormModal() {
   const searchParams = useSearchParams();
   const currentPage = searchParams.get("auth") as Auth;
+  const router = useRouter();
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-5">
@@ -48,7 +49,7 @@ export default function FormModal() {
         <div className="w-[92%] m-auto pt-7 space-y-4">
           {currentPage === 'sign-in' ? <SignIn /> : <SignUp />}
           <div>
-            <button type="button" className="w-full 2xl:h-16 bg-[#820AD1] p-3 rounded-md cursor-pointer hover:brightness-125 transition ease-in-out mt-1.5">
+            <button onClick={() => router.push('/home')}  type="button" className="w-full 2xl:h-16 bg-[#820AD1] p-3 rounded-md cursor-pointer hover:brightness-125 transition ease-in-out mt-1.5">
               {currentPage === 'sign-in' ? "Fazer Login" : "Criar minha conta Nubank"}
             </button>
             {

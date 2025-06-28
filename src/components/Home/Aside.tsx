@@ -27,7 +27,7 @@ export default function Aside(props: React.ComponentProps<"div">) {
     <aside className="w-full" {...props}>
       <nav className="h-full">
         <div className="flex flex-col justify-center items-center ">
-          <div className="flex justify-center items-center gap-2.5 rounded-full border-2 border-white px-2.5 py-1.5">
+          <div className="w-full flex justify-center items-center gap-2.5 rounded-full border-2 border-white px-2.5 py-1.5">
             <button className="outline-none cursor-pointer">
               <Search size={25} />
             </button>
