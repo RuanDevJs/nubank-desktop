@@ -14,7 +14,7 @@
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-https://github.com/user-attachments/assets/d0cf0279-3b6d-4685-990c-de77586f44dc
+![image](https://github.com/user-attachments/assets/4cdaa7d5-2d72-49e8-93d8-39412cd6ef18)
 
 <h3> Overview 🚀 </h3>
 <p>
